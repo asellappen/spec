@@ -1,6 +1,9 @@
 # Configures appc tests at Travis CI (https://travis-ci.org).
 
 language: go
+arch:
+    - ppc64le
+    - amd64
 
 matrix:
   include:

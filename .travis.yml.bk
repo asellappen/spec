@@ -1,16 +1,16 @@
 # Configures appc tests at Travis CI (https://travis-ci.org).
 
 language: go
+arch:
+    - ppc64le
+    - amd64
+
 matrix:
   include:
     - go: 1.5.3
       env: GO15VENDOREXPERIMENT=1
     - go: 1.6.2
-    - go: 1.5.3
-      arch: ppc64le
-      env: GO15VENDOREXPERIMENT=1
-    - go: 1.6.2
-      arch: ppc64le
+
 # Nothing to install, it's part of vendoring.
 install: true
 
